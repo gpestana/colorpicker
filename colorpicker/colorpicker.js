@@ -253,7 +253,7 @@ opacity:0.5})
         //$(input_target).css("color", "#000");
       }
       //input_target.style.background = c;
-      $("#showcase").css("background-color", c)
+      $("#main_image").css("background-color", c)
 
     }
 

@@ -15,17 +15,32 @@ src="https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael.
 hex: <input type="text" id="color" /><br><br>
 r: <input type="text" id="r" class="rgb" /><br>
 g: <input type="text" id="g" class="rgb" /><br>
-b: <input type="text" id="b" class="rgb" />
+b: <input type="text" id="b" class="rgb" /><br>
 
-<div id="showcase"></div>
+<br>
+<div id = wrapper>
+  <img src = "marilyn.png" id="main_image"></img>
+  <img src = "logo_1.png" id="logo"></img>
+</div>
 
 </body>
 
 <style>
-#showcase {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
+#wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+#main_image {
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  position: absolute;
+  top: 20px;
+  left: 75px;
 }
 </style>
 
