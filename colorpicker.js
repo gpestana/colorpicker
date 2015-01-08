@@ -242,16 +242,21 @@ opacity:0.5})
     current_color_hsb = hsb;
     current_color = Raphael.hsb2rgb(hsb.h, hsb.s,hsb.b);
 
+
     if(input_target){
       var c = current_color.hex;
+
       if(dont_replace_input_value !== true) { input_target.value = c;}
        if(hsb.b < 0.5){
-        $(input_target).css("color", "#FFF");
+        //$(input_target).css("color", "#FFF");
       } else {
-        $(input_target).css("color", "#000");
+        //$(input_target).css("color", "#000");
       }
-      input_target.style.background = c;
+      //input_target.style.background = c;
+      $("#showcase").css("background-color", c)
+
     }
+
 
   }
 
