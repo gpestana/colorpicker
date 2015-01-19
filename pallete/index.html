@@ -1,0 +1,103 @@
+<html>
+ <head>
+<meta charset="UTF-8">
+</head> 
+<body>
+
+<h3>Color palette</h3>
+<br>
+
+<div id="palette">
+<div class="color_line">
+  <a class="color_palette" id="ab735a" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="cf6c61" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="f63c07" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="f8592f" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="fe771d" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="feaf1e" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="48d789" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="20a85b" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="7dd30e" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="b4dd54" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="fbeb6f" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="fad34a" onclick="pick_color(this)" href="#" >.</a>
+</div>
+
+<div class="color_line">
+  <a class="color_palette" id="94e1bd" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="a0e1e8" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="a0c5eb" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="4a83ef" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="9a99ff" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="b897ff" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="c2c2c2" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="cabdbf" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="cba6ac" onclick="pick_color(this)" href="#" >.</a>
+  <a class="color_palette" id="f591b4" onclick="pick_color(this)" href="#"> .</a>
+  <a class="color_palette" id="cd74ee" onclick="pick_color(this) "href="#">.</a>
+  <a class="color_palette" id="a377ea" onclick="pick_color(this)" href="#" >.</a>
+</div>
+</div>
+
+
+<h4 id="result">No color selected</h4>
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+var current_color = ""
+
+var pick_color = function(color_DOM){
+  var color = color_DOM.id
+  
+  $("#"+current_color).css('border-color', "#fff") 
+  $("#"+color).css('border-color', "#000") 
+  current_color = color
+
+  //do something
+  $("#result").text("color selected: #"+color)
+
+}
+
+var init_palette = function() {
+  $(".color_palette").each(function(i){
+    $("#"+this.id).css('background-color', "#"+this.id) 
+  })
+}
+
+$(document).ready(function() {
+  init_palette()
+})
+
+</script>
+
+
+</body>
+</html>
+
+
+<style>
+
+h3 {
+  color: grey;
+}
+
+.color_line {
+  padding-bottom: 10px;
+}
+
+#palette a {
+  background-color: grey;
+
+  color: transparent;
+
+  padding: 4px 8px;
+  margin: 0px;
+
+  border-radius: 5px; 
+  border: 1px solid white;
+}
+
+</style>
+
